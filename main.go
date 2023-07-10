@@ -331,7 +331,6 @@ func fetchJobs(userID, sessionToken string, page int) ([]byte, error) {
 		req.Header.Set("User-Agent", ua)
 		req.Header.Set("Content-Type", "application/json")
 		req.Header.Set("Cookie", fmt.Sprintf("__Secure-next-auth.session-token=%s", sessionToken))
-		req.Header.Set("Cookie", fmt.Sprintf("__Secure-next-auth.session-token=%s", "1bba2291afe59646d71cca262f35579abcfc20b7d949305c390f9eb3e6223447%7C56f6026d9a0f310ffb9c41eb05301f53127eee89fa8bbee9c045457e884d1dfa"))
 
 		resp, err := http.DefaultClient.Do(req)
 		if err != nil {
